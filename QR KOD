@@ -1,0 +1,10 @@
+##Python'da çalışıyoruz. Bir tane kütüphane kullanıcaz,bunu dahil ederek başlayabiliriz.
+## pip install wifi_qrcode_generator diyerek kütüphanemizi indiriyoruz.
+##Ardından aşağıdaki kodları yazarak sizde çok basit bir şekilde kendi wifi veya başka bir wifi ağını qr koda entegre edebilirsiniz.
+
+import wifi_qrcode_generator as qr
+
+qrCode = qr.wifi_qrcode('KUTUPHANE', False, 'WPA', 'cami1907')  ## qrCode adında bir değişken oluşturup içine buradaki değerleri atıyoruz
+##İlk tırnağımıza wifi ağının adını yazıyoruz.Son tırnağımıza da wifi şifremizi
+qrCode.show()
+qrCode.save("kütüphane.png")  ##Son olarakta png formatında bilgisayarımıza kaydediyoruz.
